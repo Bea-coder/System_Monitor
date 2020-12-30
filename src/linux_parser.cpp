@@ -79,7 +79,7 @@ float LinuxParser::MemoryUtilization() {
     std::istringstream linestream(line);
       while (linestream >> key >> value) {
         if (key == "MemAvailable:") {
-          mAvailable=strtof(value);
+          mAvailable=stof(value);
           //return mAvailable;
         }
       }
@@ -90,16 +90,14 @@ float LinuxParser::MemoryUtilization() {
 // TODO: Read and return the system uptime
 long LinuxParser::UpTime() { 
   string upTime,upTimeIdl;
-  const char* value;
   string line;
   std::ifstream stream(kProcDirectory + kUptimeFilename);
   if (stream.is_open()) {
     std::getline(stream, line);
     std::istringstream linestream(line);
     linestream >> upTime >> upTimeIdl;
-    value=upTime.c_str();
   }
-  return strtol(value); 
+  return stof(upTime); 
   }
 
 // TODO: Read and return the number of jiffies for the system
