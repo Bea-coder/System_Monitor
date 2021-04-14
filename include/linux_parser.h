@@ -26,7 +26,7 @@ int TotalProcesses();
 int RunningProcesses();
 std::string OperatingSystem();
 std::string Kernel();
-
+std::string GetKey(std::string path,std::string keyValue);
 // CPU
 enum CPUStates {
   kUser_ = 0,
@@ -44,6 +44,7 @@ std::vector<std::string> CpuUtilization();
 long Jiffies();
 long ActiveJiffies();
 long ActiveJiffies(int pid);
+long ElapsedTime(int pid);
 long IdleJiffies();
 
 // Processes
