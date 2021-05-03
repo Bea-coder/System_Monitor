@@ -8,8 +8,8 @@ It contains relevant attributes as shown below
 */
 class Process {
  public:
-  Process(int Pid,std::string user,std::string command,float util){ 
-  pid_=Pid; 
+  Process(int pid,std::string user,std::string command,float util){ 
+  pid_=pid; 
   user_=user;
   command_=command;
   util_=util;

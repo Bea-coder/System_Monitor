@@ -17,6 +17,15 @@ const std::string kMeminfoFilename{"/meminfo"};
 const std::string kVersionFilename{"/version"};
 const std::string kOSPath{"/etc/os-release"};
 const std::string kPasswordPath{"/etc/passwd"};
+const std::string filterProcesses("processes");
+const std::string filterRunningProcesses("procs_running");
+const std::string filterMemTotalString("MemTotal:");
+const std::string filterMemFreeString("MemFree:");
+const std::string filterCpu("cpu");
+const std::string filterUID("Uid:");
+const std::string filterProcMem("VmData:"); //Using instead of VmSize 
+const std::string filterOS("PRETTY_NAME");
+
 
 // System
 float MemoryUtilization();
@@ -26,7 +35,10 @@ int TotalProcesses();
 int RunningProcesses();
 std::string OperatingSystem();
 std::string Kernel();
-std::string GetKey(std::string path,std::string keyValue);
+template <typename T>
+T GetKey(std::string path,std::string keyValue);
+template <typename T>
+T getValueFile(std::string const &filename);
 // CPU
 enum CPUStates {
   kUser_ = 0,
