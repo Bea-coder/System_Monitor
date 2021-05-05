@@ -14,7 +14,7 @@ using std::setfill;
 // REMOVE: [[maybe_unused]] once you define the function
 string Format::ElapsedTime(long timeClocks) { 
   std::ostringstream result;
-  long seconds=timeClocks/sysconf(_SC_CLK_TCK);
+  long seconds=timeClocks;
   int h=seconds/3600;
   int m=seconds/60-h*60;
   int s=seconds-h*3600-m*60;
