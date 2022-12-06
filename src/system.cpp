@@ -28,7 +28,7 @@ vector<Process>& System::Processes() {
  float util;
  long int activeTime, elapsed;
  processes_.clear();
- for (std::vector<int>::iterator i = PIDs.begin();i != PIDs.end();++i){
+ for (auto i = PIDs.begin(); i != PIDs.end(); ++i){
    std::string user=std::string(LinuxParser::User(*i));
    std::string command=LinuxParser::Command(*i);
    util=0.0;
