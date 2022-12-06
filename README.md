@@ -1,10 +1,5 @@
-# System-Monitor
-
-Submitted code for System Monitor Project in the Object Oriented Programming Course of the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). 
-I completed the implementation of  the `System`, `Process`, and `Processor` classes, as well as functions within the `LinuxParser` namespace.
----
-## System Monitor
-System Monitor is a similar application of **htop** for linux OS where
+# System Monitor
+System Monitor is an application similar to **htop** for linux OS where
 memory and cpu usages are displayed for all processes.
 
 ### Requirements: 
@@ -28,3 +23,6 @@ This project uses [Make](https://www.gnu.org/software/make/). The Makefile has f
 1. Build the project: `make build`
 
 2. Run the resulting executable: `./build/monitor`
+
+**note:** Submitted code for System Monitor Project in the Object Oriented Programming Course of the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). 
+I completed the implementation of  the `System`, `Process`, and `Processor` classes, as well as functions within the `LinuxParser` namespace.
